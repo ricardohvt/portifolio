@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+.box {
+    height: fit-content;
+    max-width: 800px;
+    border: 2px solid #dddddd;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    color: #dddddd;
+    font-family: 'FiraCode Nerd Font', 'Fira Code', monospace;
+    display: flex;
+    justify-content: space-between;
+    margin: 2px;
+}
+
+.box > p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+.box > h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #dddddd;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: progress;
+}
