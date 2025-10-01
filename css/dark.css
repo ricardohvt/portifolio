@@ -1,0 +1,97 @@
+body.dark-mode {
+    background-color: #121518;
+    color: #e0e0e0;
+    transition: background 0.4s, color 0.4s;
+}
+
+.dark-mode .article-main,
+.dark-mode .profile-photo {
+    border: 3px solid #37d67a;
+    transition: border 0.4s;
+}
+
+.dark-mode .stack-icons i {
+    color: #37d67a;
+    filter: drop-shadow(0 0 4px #37d67a);
+    transition: color 0.4s, filter 0.4s;
+}
+
+.dark-mode .stack-icons i:hover {
+    color: #2bb15c;
+    filter: drop-shadow(0 0 6px #2bb15c);
+}
+
+.dark-mode .github-repos a,
+.dark-mode .footer-social a {
+    color: #37d67a;
+    transition: color 0.4s;
+}
+
+.dark-mode hr.hr-text {
+    border-color: #37d67a;
+    transition: border-color 0.4s;
+}
+
+body.dark-mode article,
+body.dark-mode .card,
+body.dark-mode .repo-card,
+body.dark-mode .github-contributions {
+    background-color: aliceblue;
+    color: #121518;
+    border: 2px solid #37d67a;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+body.dark-mode article *,
+body.dark-mode .card *,
+body.dark-mode .repo-card *,
+body.dark-mode .github-contributions * {
+    color: #121518 !important;
+}
+
+body.dark-mode .repo-card {
+    box-shadow: 0 4px 8px rgba(55, 214, 122, 0.4);
+    border-radius: 6px;
+    padding: 15px;
+}
+
+body.dark-mode .github-contributions > img {
+    background-color: #f0f8ff;
+    border: 2px solid #37d67a;
+}
+
+body.dark-mode .about-me h2 {
+    color: #3a6d32;
+    border-bottom: 2px solid #37d67a;
+}
+
+body.dark-mode .about-me p {
+    color: #b0b0b0;
+}
+
+#dark-mode-toggle {
+    background-color: #37d67a;
+    color: #121518;
+    border: none;
+    padding: 3px 7px 5px 5px;
+    margin: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #2bb15c;
+    color: #f0f0f0;
+}
+
+/* ALTERAÇÃO PARA DOT GRID NO DARK MODE */
+body.dark-mode .grid-dot {
+    --dot-bg: white;
+    --dot-color: #121518;
+}
+
+body.dark-mode .profile h1,
+body.dark-mode .profile p {
+    color: #121518;               /* cor do preenchimento */
+}

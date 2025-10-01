@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
+    <link rel="stylesheet" href="./css/dark.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
     <div class="main">
-        <div class="grid-dot box" style="position: relative;"> <!-- pai relativo -->
+        <button id="dark-mode-toggle" aria-label="Alternar modo escuro">🌙</button>
+
+        <div class="grid-dot box" style="position: relative;">
             <header class="profile">
                 <img src="./assets/img/foto.jpg" height="170px" alt="Foto de perfil" class="profile-photo">
-                <h1>Olá, eu sou Ricardo</h1>
+                <h1 id="typing">Olá, eu sou Ricardo</h1>
                 <p>Desenvolvedor Full-Stack</p>
             </header>
 
@@ -23,28 +25,60 @@
                 <i class="fa-brands fa-css3-alt"></i>
                 <i class="fa-brands fa-js"></i>
                 <i class="fa-brands fa-react"></i>
+                <i class="fa-brands fa-php"></i>
+                <i class="fa-solid fa-database"></i>
                 <i class="fa-brands fa-github"></i>
                 <i class="fa-brands fa-linux"></i>
                 <i class="fa-brands fa-windows"></i>
             </div>
         </div>
+        <article class="article-main">
+            <div class="about-me">
+                <hr class="hr-text" data-content="Sobre Mim">
+                <p>Sou um desenvolvedor Full-Stack com experiência em HTML, CSS, JavaScript, React, Github, bancos de dados MySQL e Sistemas operacionais como Linux e Windows. Além disso, sou apaixonado por Sistemas operacionais e hardware, sempre buscando ter cada vez mais conhecimento na área de redes também, possuo interesse também na área de desenvolvimento de jogos, atualmente estou estudando sobre a Engine Bevy, e procurando aprender a linguagem Rust e no futuro WGSL para shaders.</p>
+                <p>Além das minhas habilidades técnicas, sou um aprendiz rápido e estou sempre buscando novas tecnologias e melhores práticas para aprimorar meu trabalho. Acredito na importância da colaboração e comunicação eficaz em equipes de desenvolvimento.</p>
+                <p>Estou entusiasmado para contribuir com projetos e crescer profissionalmente na área de desenvolvimento web.</p>
+            </div>
+            <div class="main-project">
+                <hr class="hr-text" data-content="Projeto Principal">
+                <h2>O Projeto atual no qual estou trabalhando:</h2>
+                <ul id="main-repo">
+                    <li class="repo-card">
+                        <div class="repo-top">
+                            <h2><a href="https://github.com/ricardohvt/mortos-de-fome-live" target="_blank">ricardohvt/mortos-de-fome-live</a></h2>
+                        </div>
+                        <div class="repo-bottom">
+                            <span>💻 PHP</span>
+                        </div>
+                    </li>
+                </ul>
+                <h3 class="place-self-center">Esse é o projeto "Mortos de Fome"</h3>
+                <p>Onde eu e meus colegas da escola estamos trabalhando para entregar o Projeto Integrador do Técnico do Ensino médio onde estudamos, no qual é um site focado em receitas, onde possuí categorias para o que a pessoa desejar, com a feature de conversor de medidas, o site é feito em HTML, CSS, JS e PHP puro.</p>
+            </div>
+        </article>
         <div class="github-contributions">
-            <img src="https://ghchart.rshah.org/ricardohvt" alt="Contributions do GitHub" />
+            <h3>Contribuições em um período de um ano:</h3>
+            <img src="https://ghchart.rshah.org/ricardohvt" alt="Contributions do GitHub">
         </div>
-
+        <div class="github-repos">
+            <h3>Meus Repositórios no GitHub:</h3>
+            <ul id="repo-list"></ul>
+        </div>
     </div>
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-social">
-                <a href="https://github.com/seuusuario" target="_blank" title="GitHub"><i
+                <a href="https://github.com/ricardohvt" target="_blank" title="GitHub"><i
                         class="fa-brands fa-github"></i></a>
                 <a href="https://linkedin.com/in/seuusuario" target="_blank" title="LinkedIn"><i
                         class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:seuemail@email.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:ricardohenriquevt@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
             <p>© 2025 Ricardo Henrique Vieira Tomba</p>
         </div>
     </footer>
+    <script src="./js/api.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

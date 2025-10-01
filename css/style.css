@@ -1,16 +1,41 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 @import url('./modules/dotgrid.css');
 @import url('./modules/box.css');
 @import url('./modules/stack-icons.css');
-@import url('./modules/liquid-btn.css');
 @import url('./modules/footer.css');
+@import url('./modules/githubRepo.css');
+@import url('./modules/article.css');
+@import url('./modules/hrStyle.css');
+@import url('./modules/patternBackground.css');
+@import url('./modules/buttons.css');
 
 body {
     margin: 0;
     background-color: aliceblue;
+    font-family: 'FiraCode Nerd Font', 'Fira Code', monospace;  
 }
+
+
+body, .main, .box, .article-main, .footer-content {
+    transition: background 0.4s, color 0.4s, box-shadow 0.4s;
+}
+
+#main-repo {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+}
+
+
 
 .main {
     justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 90vh;
 }
 
 .github-contributions {
@@ -30,4 +55,13 @@ body {
     background-color: #dddddd;
     border-radius: 8px;
     padding: 4px;
+    border: 2px solid #dddddd;
+    height: 140px;
+}
+
+.github-contributions > h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
