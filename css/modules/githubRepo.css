@@ -1,7 +1,6 @@
 #repo-list {
   list-style: none;
-  padding: 0;
-  display: flex;
+  padding: 0; 
   gap: 16px;
 }
 
