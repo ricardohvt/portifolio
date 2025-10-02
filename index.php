@@ -55,6 +55,8 @@
                 <h3 class="place-self-center">Esse é o projeto "Mortos de Fome"</h3>
                 <p>Onde eu e meus colegas da escola estamos trabalhando para entregar o Projeto Integrador do Técnico do Ensino médio onde estudamos, no qual é um site focado em receitas, onde possuí categorias para o que a pessoa desejar, com a feature de conversor de medidas, o site é feito em HTML, CSS, JS e PHP puro.</p>
             </div>
+            <img src="./assets/img/site_lp.webp" alt="Landing Page do site Mortos de Fome" class="site-img">
+            <img src="./assets/img/site_login.webp" alt="Aba de Login do site Mortos de Fome" class="site-img site-img-login">
         </article>
         <div class="github-contributions">
             <h3>Contribuições em um período de um ano:</h3>

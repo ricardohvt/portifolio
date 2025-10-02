@@ -8,6 +8,7 @@
 @import url('./modules/hrStyle.css');
 @import url('./modules/patternBackground.css');
 @import url('./modules/buttons.css');
+@import url('./modules/siteImage.css');
 
 body {
     margin: 0;
@@ -25,6 +26,7 @@ body, .main, .box, .article-main, .footer-content {
   padding: 0;
   display: flex;
   gap: 16px;
+  justify-content: center;
 }
 
 

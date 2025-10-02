@@ -1,0 +1,16 @@
+.site-img {
+    border: 3px solid #121518;
+    border-radius: 20px;
+    transition: border 0.4s;
+    max-width: 80%;
+}
+.site-img:hover {
+    border: 3px solid #37d67a;
+}
+
+.site-img-login {
+    max-width: 60% !important;
+    position: absolute;
+    left: 35%;
+    margin-top: 10%;
+}
