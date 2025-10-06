@@ -1,42 +1,62 @@
-const el = document.getElementById('typing');
-const text = "Olá, eu sou Ricardo";
-let index = 0;
-const delay = 40; // tempo entre cada letra em ms
+document.addEventListener('DOMContentLoaded', () => {
+    // Efeito de digitação no título (Olá, eu sou Ricardo)
+    const titleEl = document.getElementById('typing');
+    const titleText = "Olá, eu sou Ricardo";
+    const titleDelay = 40;
+    let titleIndex = 0;
 
-function type() {
-    if (index < text.length) {
-        el.textContent += text[index];
-        index++;
-        setTimeout(type, delay);
-    } else {
-        setTimeout(() => {
-            el.textContent = '';
-            index = 0;
-            type();
-        }, 10000); // tempo antes de reiniciar
+    function typeTitle() {
+        if (titleIndex < titleText.length) {
+            titleEl.textContent += titleText[titleIndex];
+            titleIndex++;
+            setTimeout(typeTitle, titleDelay);
+        } else {
+            setTimeout(() => {
+                titleEl.textContent = '';
+                titleIndex = 0;
+                typeTitle();
+            }, 10000); // reinicia após 10s
+        }
     }
-}
 
-// limpar texto antes de iniciar
-el.textContent = '';
-type();
+    titleEl.textContent = '';
+    typeTitle();
 
+    // Efeito de digitação no terminal (sudo rm -rf /)
+    const terminalEl = document.querySelector('.typing-terminal');
+    const terminalText = "sudo rm -rf /";
+    const terminalDelay = 40;
+    let terminalIndex = 0;
 
-const toggleBtn = document.getElementById('dark-mode-toggle');
+    function typeTerminal() {
+        if (terminalIndex < terminalText.length) {
+            terminalEl.textContent += terminalText[terminalIndex];
+            terminalIndex++;
+            setTimeout(typeTerminal, terminalDelay);
+        } else {
+            setTimeout(() => {
+                terminalEl.textContent = '';
+                terminalIndex = 0;
+                typeTerminal();
+            }, 10000); // reinicia após 10s
+        }
+    }
 
-toggleBtn.addEventListener('click', () => {
-    // alterna a classe dark-mode no body
-    document.body.classList.toggle('dark-mode');
+    terminalEl.textContent = '';
+    typeTerminal();
 
-    // salva preferência no localStorage
-    if(document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
+    // Alternância de modo escuro
+    const toggleBtn = document.getElementById('dark-mode-toggle');
+
+    toggleBtn?.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+    });
+
+    // Aplicar tema salvo
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
     }
 });
-
-// verifica preferência ao carregar a página
-if(localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-}
