@@ -1,6 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 @import url('./modules/grid.css');
-@import url('./modules/box.css');
 @import url('./modules/stackIcons.css');
 @import url('./modules/footer.css');
 @import url('./modules/githubRepo.css');
@@ -67,4 +66,37 @@ body, .main, .box, .article-main, .footer-content {
     text-align: center;
     font-size: 18px;
     margin-bottom: 8px;
+}
+.grid-dot {
+  --dot-bg: rgb(36, 36, 36);
+  --dot-color: white;
+  --dot-size: 2px;
+  --dot-space: 22px;
+
+  /* deslocamento de um tile inteiro para loop suave */
+  --dot-offset-x: calc(-1 * var(--dot-space));
+  --dot-offset-y: var(--dot-space);
+
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+
+  animation: move-bg 5s linear infinite;
+  will-change: background-position;
+}
+
+@keyframes move-bg {
+  0% {
+    background-position:
+      0 0,
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      var(--dot-offset-x) var(--dot-offset-y),
+      var(--dot-offset-x) var(--dot-offset-y),
+      0 0;
+  }
 }
