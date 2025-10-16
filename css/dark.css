@@ -1,6 +1,9 @@
 body.dark-mode {
-    background-color: #121518;
+    background-color: #1d1f20;
     color: #e0e0e0;
+    background-image: linear-gradient(rgba(231, 231, 231, 0.555) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(231, 231, 231, 0.555) 1px, transparent 1px);
+    background-size: 2rem 2rem;
     transition: background 0.4s, color 0.4s;
 }
 
@@ -93,5 +96,5 @@ body.dark-mode .grid-dot {
 
 body.dark-mode .profile h1,
 body.dark-mode .profile p {
-    color: #121518;               /* cor do preenchimento */
+    color: #121518;
 }

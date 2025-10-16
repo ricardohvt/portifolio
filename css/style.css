@@ -9,10 +9,19 @@
 @import url('./modules/siteImage.css');
 @import url('./modules/terminal.css');
 
+:root {
+  --bg-primary: aliceblue;
+  --bg-pattern: rgba(0, 0, 0, 0.2);
+}
+
 body {
     margin: 0;
     background-color: aliceblue;
-    font-family: 'FiraCode Nerd Font', 'Fira Code', monospace;  
+    font-family: 'FiraCode Nerd Font', 'Fira Code', monospace;
+    background-color: var(--bg-primary);
+    background-image: linear-gradient(var(--bg-pattern) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-pattern) 1px, transparent 1px);
+    background-size: 2rem 2rem;
 }
 
 
