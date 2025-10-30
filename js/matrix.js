@@ -17,7 +17,7 @@ const drops = Array(columns).fill(1);
 function draw() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = '#0F0';
+  ctx.fillStyle = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;;
   ctx.font = `${fontSize}px monospace`;
 
   drops.forEach((y, i) => {
